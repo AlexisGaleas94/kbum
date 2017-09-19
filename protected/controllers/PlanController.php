@@ -36,7 +36,7 @@ class PlanController extends Controller
 					'roles'=>array('admin'),
 				),
 				array('allow', // allow admin user to perform 'admin' and 'delete' actions
-					'actions'=>array('admin','delete','create','update','view','conoce','unidad'),
+					'actions'=>array('admin','delete','create','lienzo','canvas','actualizar','update','view','conoce','unidad','leccion1','Describe'),
 					'roles'=>array('admin','direct'),
 				),
 				array('allow',
@@ -124,23 +124,7 @@ class PlanController extends Controller
 			'model'=>$model,
 		));
 	}
-		public function actionUnidad($id){
-		$model=$this->loadModel($id);
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Plan']))
-		{
-			$model->attributes=$_POST['Plan'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idplan));
-		}
-
-		$this->render('unidad1/leccion1',array(
-			'model'=>$model,
-		));
-	}
 	public function actionNombre(){
 		$model=$this->loadModel();
 
@@ -167,6 +151,108 @@ class PlanController extends Controller
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
+	/*mis funciones*/
+	public function actionLeccion1($id){
+		$describe=new DescribeForm;
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Plan']))
+		{
+			$model->attributes=$_POST['Plan'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->idplan));
+		}
+
+		$this->render('leccion1',array(
+			'model'=>$model, 'describe'=>$describe,
+		));
+	}
+	public function actionLienzo($id){
+		$describe=new DescribeForm;
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Plan']))
+		{
+			$model->attributes=$_POST['Plan'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->idplan));
+		}
+
+		$this->render('lienzo',array(
+			'model'=>$model, 'describe'=>$describe,
+		));
+	}
+	public function actionCanvas($id){
+		$describe=new DescribeForm;
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Plan']))
+		{
+			$model->attributes=$_POST['Plan'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->idplan));
+		}
+
+		$this->render('canvas',array(
+			'model'=>$model, 'describe'=>$describe,
+		));
+	}
+	public function actionDescribe($id){
+		    $model=new Plan;
+		    $describe=new Conoce;
+		    $model=$this->loadModel($id);
+
+
+    		if(isset($_POST['Conoce'])){
+				$describe->attributes=$_POST['Conoce'];
+				if($describe->save()){
+					
+					//$this->redirect(array('view','id'=>$model->idplan));
+				}
+			}
+
+		$this->render('leccion1',array(
+			'model'=>$model,'describe'=>$describe,
+		));
+	}
+	public function actionActualizar($id,$idmodel){
+		$describe=$this->loadConoce($id);
+		$model=$this->loadModel($idmodel);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Conoce']))
+		{
+			$describe->attributes=$_POST['Conoce'];
+			if($describe->save())
+				$this->redirect(array('Describe','id'=>$model->idplan));
+		}
+
+		$this->render('actualizar',array(
+			'describe'=>$describe,
+		));
+	}
+
+	public function loadConoce($id){
+		$model=Conoce::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+
+
+	/*mis funciones*/
 
 	/**
 	 * Lists all models.
@@ -221,5 +307,6 @@ class PlanController extends Controller
 			Yii::app()->end();
 		}
 	}
+
 
 }

@@ -6,9 +6,7 @@
  * The followings are the available columns in table 'conoce':
  * @property integer $idconoce
  * @property string $nombreempresa
- * @property string $objetivos
- * @property string $logotipo
- * @property string $tipo
+ * @property string $giro
  * @property string $ubicacion
  * @property string $size
  * @property string $mision
@@ -39,13 +37,13 @@ class Conoce extends CActiveRecord
 		return array(
 			array('plan_idplan', 'required'),
 			array('plan_idplan', 'numerical', 'integerOnly'=>true),
-			array('nombreempresa, objetivos, logotipo, ubicacion', 'length', 'max'=>200),
-			array('tipo, fortalezas, oportunidades, debilidades, amenazas', 'length', 'max'=>100),
+			array('nombreempresa, giro, ubicacion', 'length', 'max'=>200),
 			array('size', 'length', 'max'=>45),
 			array('mision, vision', 'length', 'max'=>300),
+			array('fortalezas, oportunidades, debilidades, amenazas', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idconoce, nombreempresa, objetivos, logotipo, tipo, ubicacion, size, mision, vision, fortalezas, oportunidades, debilidades, amenazas, plan_idplan', 'safe', 'on'=>'search'),
+			array('idconoce, nombreempresa, giro, ubicacion, size, mision, vision, fortalezas, oportunidades, debilidades, amenazas, plan_idplan', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,9 +66,7 @@ class Conoce extends CActiveRecord
 		return array(
 			'idconoce' => 'Idconoce',
 			'nombreempresa' => 'Nombreempresa',
-			'objetivos' => 'Objetivos',
-			'logotipo' => 'Logotipo',
-			'tipo' => 'Tipo',
+			'giro' => 'Giro',
 			'ubicacion' => 'Ubicacion',
 			'size' => 'Size',
 			'mision' => 'Mision',
@@ -103,9 +99,7 @@ class Conoce extends CActiveRecord
 
 		$criteria->compare('idconoce',$this->idconoce);
 		$criteria->compare('nombreempresa',$this->nombreempresa,true);
-		$criteria->compare('objetivos',$this->objetivos,true);
-		$criteria->compare('logotipo',$this->logotipo,true);
-		$criteria->compare('tipo',$this->tipo,true);
+		$criteria->compare('giro',$this->giro,true);
 		$criteria->compare('ubicacion',$this->ubicacion,true);
 		$criteria->compare('size',$this->size,true);
 		$criteria->compare('mision',$this->mision,true);
