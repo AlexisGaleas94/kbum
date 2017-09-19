@@ -109,18 +109,17 @@
 <!-- //about-bottom -->
 
 <!--sevices-->
-	<div class="sevices-w3layouts" id="services">
+	<div class="" id="services">
 		<div class="container">
 			<div class="sevices-header-agile">
-				<h3 class="tittle">Servicios</h3>
-				<p class="title-para-w3-agileits">Te ayudamos en tus necesidades</p>
+				<h3 class="tittle" style="color:black">Servicios</h3>
+				<br>
 			</div>
-
 			<div class="row">
 				<div class="col-md-4 sevices-grid wow fadeInDown" data-wow-duration="1s">
 					<div>
 						<i class="fa fa-briefcase" aria-hidden="true"></i>
-						<h4>Imagen Corporativa</h4>
+						<h4 style="color:black;">Equipo de trabajo</h4>
 					</div>
 					<p class="para-agileits">Definimos su imagen corporativa atendiendo a sus rasgos, características y valores,
 					haciendo posible que ésta llegue al público con un estilo y una personalidad única y coherente.</p>
@@ -135,7 +134,7 @@
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										<h4 style="color:black;">Imagen Corporativa</h4>
 										<div class="col-md-12">
-											<div class="col-md-5 ">
+				<strong>							<div class="col-md-5 ">
 												<img src="<?php echo Yii::app()->request->baseUrl; ?>/scr/images/imagen coorporativa/4.jpg" alt=" " class="img-responsive">
 											</div>
 											<div class="col-md-7  text-justify">
@@ -175,7 +174,7 @@
 				<div class="col-md-4 sevices-grid wow fadeInDown" data-wow-duration="1s">
 					<div>
 						<i class="fa fa-search" aria-hidden="true"></i>
-						<h4>Análisis de Gestión Empresarial</h4>
+						<h4 style="color:black;">Análisis de Gestión Empresarial</h4>
 					</div>
 					<p class="para-agileits">Análisis y mejora de cualquier componente de la organización, identificando detalladamente elementos de mal funcionamiento que necesitan ser revisados y ajustados</p>	
 					<div class="w3ls-agile-left1">
@@ -226,7 +225,7 @@
 				<div class="col-md-4 sevices-grid wow fadeInDown" data-wow-duration="1s">
 					<div>
 						<i class="fa fa-sitemap" aria-hidden="true"></i>
-						<h4>Organización integral de la empresa</h4>
+						<h4 style="color:black;">Plan de negocios</h4>
 					</div>
 					<p class="para-agileits">Nuestro equipo le ofrece un servicio a medida de las necesidades de su empresa, aportando una mejora visible en técnicas de gestión y optimización de los procesos.</p>
 					<div class="w3ls-agile-left1">

@@ -22,18 +22,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'objetivos'); ?>
-		<?php echo $form->textField($model,'objetivos',array('size'=>60,'maxlength'=>200)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'logotipo'); ?>
-		<?php echo $form->textField($model,'logotipo',array('size'=>60,'maxlength'=>200)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'tipo'); ?>
-		<?php echo $form->textField($model,'tipo',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->label($model,'giro'); ?>
+		<?php echo $form->textField($model,'giro',array('size'=>60,'maxlength'=>200)); ?>
 	</div>
 
 	<div class="row">

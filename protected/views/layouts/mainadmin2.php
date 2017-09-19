@@ -1,5 +1,5 @@
   <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -12,16 +12,16 @@
     <!-- Font Awesome -->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="<?php echo Yii::app()->request->baseUrl; ?>/admin/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/admin/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/admin/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/admin/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Custom Theme Style -->
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/admin/build/css/custom.min.css" rel="stylesheet">
+
   </head>
 
   <body class="nav-md">

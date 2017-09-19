@@ -9,7 +9,7 @@
 <p class="help-block">Los campos con <span class="required">*</span> son requeridos</p>
 
 
-<table class="table table-hover">
+<table class="table table-hover"> 
   <thead>
     <tr>
       <th>#</th>
@@ -17,7 +17,7 @@
       <th>Prespuestas</th>
     </tr>
   </thead>
-
+ 
   <tbody>
   	<?php 
   		if (Yii::app()->user->roles=="direct") {

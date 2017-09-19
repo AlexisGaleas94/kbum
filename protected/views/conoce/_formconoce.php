@@ -26,21 +26,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'objetivos'); ?>
-		<?php echo $form->textField($model,'objetivos',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'objetivos'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'logotipo'); ?>
-		<?php echo $form->textField($model,'logotipo',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'logotipo'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'tipo'); ?>
-		<?php echo $form->textField($model,'tipo',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'tipo'); ?>
+		<?php echo $form->labelEx($model,'giro'); ?>
+		<?php echo $form->textField($model,'giro',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->error($model,'giro'); ?>
 	</div>
 
 	<div class="row">

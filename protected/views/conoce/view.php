@@ -23,9 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'idconoce',
 		'nombreempresa',
-		'objetivos',
-		'logotipo',
-		'tipo',
+		'giro',
 		'ubicacion',
 		'size',
 		'mision',

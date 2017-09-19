@@ -13,16 +13,8 @@
 	<?php echo CHtml::encode($data->nombreempresa); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('objetivos')); ?>:</b>
-	<?php echo CHtml::encode($data->objetivos); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('logotipo')); ?>:</b>
-	<?php echo CHtml::encode($data->logotipo); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('tipo')); ?>:</b>
-	<?php echo CHtml::encode($data->tipo); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('giro')); ?>:</b>
+	<?php echo CHtml::encode($data->giro); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ubicacion')); ?>:</b>
@@ -33,7 +25,6 @@
 	<?php echo CHtml::encode($data->size); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('mision')); ?>:</b>
 	<?php echo CHtml::encode($data->mision); ?>
 	<br />
@@ -42,6 +33,7 @@
 	<?php echo CHtml::encode($data->vision); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fortalezas')); ?>:</b>
 	<?php echo CHtml::encode($data->fortalezas); ?>
 	<br />
